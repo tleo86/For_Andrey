@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <script type="text/javascript" src="jquery-3.2.1.js"></script>
+        <script type="text/javascript" src="moment.js"></script>
+        <link href="style.css" rel="stylesheet" type="text/css">
+            <title>Тестовое задание</title>
+            </head>
+<body>
+    <div id="head">
+	  <h1>Тестовое задание</h1>
+	</div>
+	<div>
+	  <table id= "table_head" class ='newtbl'>
+        <thead>
+            <th  style="width: 35px">Id</th>
+            <th  style="width: 107px">Name</th>
+            <th  style="width: 45px">Quen-y</th>
+            <th  style="width: 640px">Comment</th>
+            <th  style="width: 80px">Add Date</th>
+        </thead>
+      </table>
+     </div>
+   <div class ='scrollable'>
+         <table id = "table"  class ='newtbl'>
+         </table>
+   </div>
+        <div id="buttons">
+              <button id="myBtn" class="btns">Добавить</button>
+              <button class="btns"  onclick="removeSelectedRow();">Удалить</button>
+        </div>
+  <div id="myModal" class="modal">
+       <div class="modal-content">                
+          <input id="name" class="input" type="text" placeholder="Название" value=""/></br>
+          <input id="quentity" class="input" type="number" placeholder="Количество" value="" /></br>
+          <input id="comment" class="input" type="text" placeholder="Комментарий" value=""/></br>
+          <button  id = "add" onclick="addrows();" >готово</button>
+          <button class = "close">Отмена</button>
+       </div>
+  </div> 
+ <script src ="script.js"></script>
+    </body>
+</html>
