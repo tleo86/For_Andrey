@@ -71,3 +71,47 @@ function CheckEmptyInput(){
                 }
               return isEmpty;
  }
+ 
+ function addrows(){
+	if(!CheckEmptyInput()){
+	          var newRow = table.insertRow(table.length),
+					cell0 = newRow.insertCell(0),
+					cell1 = newRow.insertCell(1),
+					cell2 = newRow.insertCell(2),
+					cell3 = newRow.insertCell(3),
+					cell4 = newRow.insertCell(4),
+					nfs = document.getElementById('name').value;
+					qfs = document.getElementById('quentity').value;
+					cfs = document.getElementById('comment').value;
+					cell0.innerHTML = cnt;
+					cell1.innerHTML = nfs;
+					cell2.innerHTML = qfs;
+					cell3.innerHTML = cfs;
+					cell4.innerHTML = datecrt;
+					selectedRowToInput();
+					cls.onclick();
+				}
+		}
+function selectedRowToInput(){
+	for(var i = 0; i < table.rows.length; i++)
+                {
+                    table.rows[i].onclick = function()
+                    {
+                      rIndex = this.rowIndex;
+                      document.getElementById("name").value = this.cells[0].innerHTML;
+                      document.getElementById("quentity").value = this.cells[1].innerHTML;
+                      document.getElementById("comment").value = this.cells[2].innerHTML;
+                      
+                    };
+                }
+            }
+           selectedRowToInput();
+           
+function removeSelectedRow()
+{
+                table.deleteRow(rIndex);
+                document.getElementById('name').value = "";
+                document.getElementById('quentity').value = "";
+                document.getElementById('comment').value = "";
+}
+ 
