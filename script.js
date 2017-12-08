@@ -51,3 +51,23 @@ var request;
 				 }
 		}
  request.send();
+
+    var nfs='';
+	var qfs='';
+	var cfs='';
+function CheckEmptyInput(){
+	var isEmpty = false;
+	nfs = document.getElementById('name').value;
+	qfs = document.getElementById('quentity').value;
+	cfs = document.getElementById('comment').value;
+ 
+ if(nfs === ""){
+                    alert("Name Can't Be Empty");
+                    isEmpty = true;
+                }
+                else if(qfs === ""){
+                    alert("Quentity Can't Be Empty");
+                    isEmpty = true;
+                }
+              return isEmpty;
+ }
